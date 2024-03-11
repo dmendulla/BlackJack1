@@ -123,28 +123,37 @@ public class BlackJack {
                 if (playerScore == 21) {
                     System.out.println("Player wins");
                     playerMoney += bet;
+                    System.out.println("Your final money: $" + playerMoney);
+                    break;
                 } else if (playerScore > 21) {
                     System.out.println("Dealer wins");
                     playerMoney -= bet;
+                    System.out.println("Your final money: $" + playerMoney);
+                    break;
 
                 }
 
                 if (dealerScore >= 17 && dealerScore <= 21) {
                     System.out.println("Dealer wins");
                     playerMoney -= bet;
+                    System.out.println("Your final money: $" + playerMoney);
+                    break;
                 } else if (dealerScore > 21) {
                     System.out.println("Player wins");
                     playerMoney += bet;
+                    System.out.println("Your final money: $" + playerMoney);
+                    break;
                 }
 
                 if (dealerScore == playerScore) {
                     System.out.println("Push");
+                    System.out.println("Your final money: $" + playerMoney);
+                    break;
                 }
 
             } else if (response != "hit" || response != "stay") {
                 System.out.println("Please type 'hit' or 'stay'");
-            }
-            break;
+                }
             }
         }
     }
